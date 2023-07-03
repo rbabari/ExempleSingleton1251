@@ -20,6 +20,17 @@ public class Main {
         }
 
 
+       Astre soleil = Soleil.getInstance();
+
+       Astre mars = new Planet("mars");
+       Astre jupiter = new Planet("jupiter");
+       IOrbitable terre = (IOrbitable) Terre.getInstance();
+
+       // System.out.println("nombre de planette" + ((Planet)terre).getCompteurPlanet() ); dans le cas ou compteur n est pas statique ... ça ne marche pas
+
+        System.out.println(" " + Planet.getCompteurPlanet());
+       Soleil.add((Astre) terre);
+
 
 
         System.out.printf("----------!");
